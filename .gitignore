@@ -1,91 +1,25 @@
-# Gradle
-# ------
+# Created by .ignore support plugin (hsz.mobi)
+### Gradle template
 .gradle
-/build
-/buildSrc/build
-/buildSrc/subprojects/*/build
-/subprojects/*/build
-/subprojects/docs/src/samples/**/build
-/subprojects/internal-android-performance-testing/build-android-libs
+/build/
 
-# IDEA
-# ----
-!/.idea
-/.idea/*
-!/.idea/codeStyles
-!/.idea/inspectionProfiles
-*/**/.idea
-.shelf
-/*.iml
-/*.ipr
-/*.iws
-/buildSrc/.idea
-/buildSrc/.shelf
-/buildSrc/*.iml
-/buildSrc/*.ipr
-/buildSrc/*.iws
-/buildSrc/out
-/buildSrc/subprojects/*/*.iml
-/buildSrc/subprojects/*/out
-/out
-/subprojects/*/*.iml
-/subprojects/*/out
-/.teamcity/*.iml
-/.teamcity/target
+# Ignore Gradle GUI config
+gradle-app.setting
 
-# Eclipse
-# -------
-*.classpath
-*.project
-*.settings
-/bin
-/subprojects/*/bin
-atlassian-ide-plugin.xml
-.metadata/
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
 
-# NetBeans
-# --------
-.nb-gradle
-.nb-gradle-properties
-
-# Vim
-# ---
-*.sw[nop]
-
-# Emacs
-# -----
-*~
-\#*\#
-.\#*
-
-# Textmate
-# --------
-.textmate
-
-# Sublime Text
-# ------------
-*.sublime-*
-
-# jEnv
-# ----
-.java-version
-
-# macOS
-# ----
-.DS_Store
-
-# HPROF
-# -----
-*.hprof
-
-# Work dirs
-# ---------
-/incoming-distributions
-/intTestHomeDir
-
-# Logs
-# ----
-/*.log
-
-# oh-my-zsh gradle plugin
+# Cache of project
 .gradletasknamecache
+
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
