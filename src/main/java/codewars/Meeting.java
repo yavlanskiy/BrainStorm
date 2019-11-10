@@ -14,6 +14,7 @@ public class Meeting {
                 .collect(Collectors.joining(""));
     }
 
+
     public static void main(String[] args) {
          String s = "Fred:Corwill;Wilfred:Corwill;Barney:Tornbull;Betty:Tornbull;Bjon:Tornbull;Raphael:Corwill;Alfred:Corwill";
 
