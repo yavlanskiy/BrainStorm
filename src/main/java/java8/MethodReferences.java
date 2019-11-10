@@ -11,22 +11,23 @@ public class MethodReferences {
                 map(QAAutomation::getName).
                       forEach(System.out::println);
 
-        Stream.of("Nata", "Ira").map(x -> new QAAutomation(x)).forEach(x -> System.out.print(x.getName() + " "));
+        Stream.of("Nata", "Ira").map(QAAutomation::new).forEach(x -> System.out.print(x.getName() + " "));
+    }
+    public static class QAAutomation {
+        String name;
+
+        public QAAutomation(String aName) {
+            name = aName;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String aName) {
+            name = aName;
+        }
     }
 }
 
-class QAAutomation {
-    String name;
 
-    public QAAutomation(String aName) {
-        name = aName;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String aName) {
-        name = aName;
-    }
-}
