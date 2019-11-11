@@ -6,7 +6,11 @@ public class For {
     private ArrayList<String> tabs;
 
     public static void main(String[] args) {
-        for (int i = 1; i <= 50; i++) {
+        int[] mass = {47, 0, 1};
+
+
+        for (int i = 0; i < mass.length; i++) {
+            System.out.println(mass[i]);
         }
     }
 }
