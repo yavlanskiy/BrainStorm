@@ -23,8 +23,3 @@ gradle-app.setting
 *.iml
 out
 gen
-src/main/java/examles/
-src/main/java/java8/LocalDateEx.java
-src/main/java/java8/Stream/
-src/main/resources/
-src/test/resources/
