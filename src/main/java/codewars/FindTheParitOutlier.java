@@ -25,6 +25,10 @@ public class FindTheParitOutlier {
         return -1;
     }
 
+    private static boolean dividesByTwo(int a){
+        return (a%2==0);
+    }
+
     public static int find2(int[] integers) {
         // Since we are warned the array may be very large, we should avoid counting values any more than we need to.
 
@@ -39,9 +43,7 @@ public class FindTheParitOutlier {
                 .filter(n -> Math.abs(n) % 2 == mod).findFirst().getAsInt();
     }
 
-    private static boolean dividesByTwo(int a){
-        return (a%2==0);
-    }
+
 
     public static void main(String[] args) {
         System.out.println(find(new int[] {47, 0, 1}));
