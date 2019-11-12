@@ -6,11 +6,14 @@ public class For {
     private ArrayList<String> tabs;
 
     public static void main(String[] args) {
-        int[] mass = {47, 0, 1};
+        int a = 7;
+        int b =5;
 
+        System.out.println(Integer.toBinaryString(a));
+        System.out.println(Integer.toBinaryString(b));
 
-        for (int i = 0; i < mass.length; i++) {
-            System.out.println(mass[i]);
-        }
+        System.out.println(Integer.toBinaryString(a^b));
+
+        System.out.println(a^b);
     }
 }
