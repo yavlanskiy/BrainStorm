@@ -1,5 +1,8 @@
 package codewars;
 
+import java8.Stream.Streams;
+
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /***
@@ -34,9 +37,16 @@ import java.util.stream.Stream;
  */
 public class EasyBal {
     public static String balance(String book) {
-        return Stream.of(book)
-                .reduce("Original Balance: " , (s, s2) -> s + s2)
-                .replaceAll(" ","_");
+        String matrix = Stream.of(book).collect(Collectors.joining())
+                        //.reduce("Original Balance: " , (s, s2) -> s + s2)
+                        .replaceAll("[,:,!,=]","")
+                        .replaceAll(" ","_");
+        double summ = Double.parseDouble(Stream.of(matrix.split("\n")).findFirst().get());
+
+        Stream.of(matrix).map(s -> s.replaceAll("(\\d+)_(\\w+)_",""));
+
+
+        return null;
     }
 
     public static void main(String[] args) {
