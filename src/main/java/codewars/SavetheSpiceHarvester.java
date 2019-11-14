@@ -35,14 +35,22 @@ public class SavetheSpiceHarvester {
     }
 
     public static void main(String[] args) {
-        int x1 = 200; int x2 = 350;
-        int y1 = 100; int y2 = 200;
+        int x1 = 345; int x2 = 600;
+        int y1 = 200; int y2 = 100;
 
-        int sCarryall = 32;
+        int sWorm = 25;
 
         double distance =  sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
-        double time = distance/sCarryall;
+        double time = distance/sWorm;
 
         System.out.println(time);
+    }
+
+    public int calculateDistance(int x1, int x2, int y1, int y2) {
+        return (int) sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
+    }
+
+    public int calculateTime(int distanse, int speed) {
+        return distanse/speed;
     }
 }
