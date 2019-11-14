@@ -1,5 +1,9 @@
 package codewars;
 
+import java.util.Map;
+
+import static java.lang.Math.*;
+
 /**
  * Goal:
  * As a spotter pilot, you are responsible for handling dispatch of Carryalls in your vicinity. Your goal is to determine whether a carryall should be sent for rescue, or if it must be forfeited because there is not enough time.
@@ -26,6 +30,19 @@ package codewars;
  */
 public class SavetheSpiceHarvester {
     public static String harvesterRescue(final int[][] data) {
+
         return "Save me!";
+    }
+
+    public static void main(String[] args) {
+        int x1 = 200; int x2 = 350;
+        int y1 = 100; int y2 = 200;
+
+        int sCarryall = 32;
+
+        double distance =  sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
+        double time = distance/sCarryall;
+
+        System.out.println(time);
     }
 }
