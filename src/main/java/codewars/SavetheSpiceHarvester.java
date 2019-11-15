@@ -1,8 +1,7 @@
 package codewars;
 
-import java.util.Map;
-
-import static java.lang.Math.*;
+import static java.lang.Math.pow;
+import static java.lang.Math.sqrt;
 
 /**
  * Goal:
@@ -30,27 +29,50 @@ import static java.lang.Math.*;
  */
 public class SavetheSpiceHarvester {
     public static String harvesterRescue(final int[][] data) {
+        int harvesterX = data[0][0];
+        int harvesterY = data[0][1];
 
-        return "Save me!";
+        int wormX = data[1][0];
+        int wormY = data[1][1];
+        int wormS = data[1][2];
+
+        int carryallX = data[2][0];
+        int carryallY = data[2][1];
+        int carryallS = data[2][2];
+
+        double wormD = calculateDistance(wormX, wormY, harvesterX, harvesterY);
+        double carryallD = calculateDistance(carryallX, carryallY, harvesterX, harvesterY);
+
+        double timeWorm = calculateTime(wormD, wormS);
+        double timeCarryall = calculateTime(carryallD, carryallS);
+
+        if (timeWorm > ++timeCarryall) {
+            return "The spice must flow! Rescue the harvester!";
+        }
+        else {
+            return "Damn the spice! I'll rescue the miners!";
+        }
+    }
+
+    private static double calculateDistance(double x1, double x2, double y1, double y2) {
+        return (int) sqrt(pow((x1 - x2), 2) + pow((y1 - y2), 2));
+    }
+
+    private static double calculateTime(double distance, double speed) {
+        return distance/speed;
     }
 
     public static void main(String[] args) {
-        int x1 = 345; int x2 = 600;
-        int y1 = 200; int y2 = 100;
+        int data[][] = {
+                {345, 600},      // Harvester Position
+                {200, 100, 25},  // Worm Position&Speed
+                {350, 200, 32}}; // Carryall Position&Speed
 
-        int sWorm = 25;
-
-        double distance =  sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
-        double time = distance/sWorm;
-
-        System.out.println(time);
+        int data2[][] = {
+                {200, 400},      // Harvester Position
+                {200, 0, 40},  // Worm Position&Speed
+                {500, 100, 45}}; // Carryall Position&Speed
     }
 
-    public int calculateDistance(int x1, int x2, int y1, int y2) {
-        return (int) sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
-    }
 
-    public int calculateTime(int distanse, int speed) {
-        return distanse/speed;
-    }
 }

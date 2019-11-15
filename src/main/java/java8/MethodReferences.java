@@ -11,7 +11,7 @@ public class MethodReferences {
                 map(QAAutomation::getName).
                       forEach(System.out::println);
 
-        Stream.of("Nata", "Ira").map(QAAutomation::new).forEach(x -> System.out.print(x.getName() + " "));
+        //Stream.of("Nata", "Ira").map(QAAutomation::new).forEach(x -> System.out.print(x.getName() + " "));
     }
     public static class QAAutomation {
         String name;

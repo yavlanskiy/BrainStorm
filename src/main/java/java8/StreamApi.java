@@ -21,6 +21,7 @@ public class StreamApi {
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
+
         Stream<String> stringStream = list.stream();
         stringStream.forEach(System.out::println);
         for(String s : list) {
@@ -35,26 +36,31 @@ public class StreamApi {
         Stream<String> stringStream1 = stringStream.filter((x) -> {
             System.out.println("hello");
             return x.equals("one");
-        });//lazy
+        });
+        //lazy
         stringStream1.forEach(System.out::println);//eager
 
         Set<String> st = Stream.of("one", "two").collect(Collectors.toSet());//eager
         List<String> list1 = Stream.of("one", "two").map(x -> x.toUpperCase()).collect(Collectors.toList());
         List<String> list2 = Stream.of("one", "two").filter(x -> x.equals("one")).collect(Collectors.toList());
         List<String> list3 = Stream.of(asList("one", "two"), asList("three", "four")).flatMap(x -> x.stream()).collect(Collectors.toList());
+
         int value = Stream.of(1, 2).min(Comparator.comparing(x -> x)).get();
         int value2 = Stream.of(1, 2).max(Comparator.comparing(x -> x)).get();
         int count = Stream.of(1, 2, 3).reduce(0, (acc, element) -> acc + element);
+
         int accomulator = 0;
         for(int element : new int[]{1,2,3}) {
             accomulator += element;
         }
+
         BinaryOperator<Integer> accumulator = (acc, element) -> acc + element;
         int count2 = accumulator.apply(
                 accumulator.apply(
                         accumulator.apply(0, 1),
                         2),
                 3);
+
         Stream.of("one", "two").sorted().collect(Collectors.toList());
         Stream.of("one", "two").limit(1).collect(Collectors.toList());
         Stream.of("one", "one").distinct().collect(Collectors.toList());
