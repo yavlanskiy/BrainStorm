@@ -1,7 +1,5 @@
 package codewars;
 
-import java8.Stream.Streams;
-
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
