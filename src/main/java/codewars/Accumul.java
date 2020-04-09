@@ -1,20 +1,31 @@
 package codewars;
 
-import java.util.Arrays;
-import java.util.List;
-
 public class Accumul {
     public static String accum(String s) {
-        String resultString = "";
-        int count = 1;
-        List<String> strings = Arrays.asList(s);
-        for (String string : strings) {
-
+        StringBuilder resultString = new StringBuilder();
+        int count = 0;
+        char[] mass = s.toCharArray();
+        for (char string : mass) {
+            count ++;
+            if (count == 1) {
+                resultString.append(Character.toUpperCase(string));
+            } else {
+                int j = 0;
+                while (j != count) {
+                    if (j == 0) {
+                        resultString.append(Character.toUpperCase(string));
+                    } else {
+                        resultString.append(Character.toLowerCase(string));
+                    }
+                    j++;
+                }
+            }
+            resultString.append("-");
         }
-        return null;
+        return resultString.toString().replaceAll(".$", "");
     }
 
     public static void main(String[] args) {
-        accum("1234");
+        System.out.println(accum("ZpglnRxqenU"));
     }
 }
