@@ -19,7 +19,7 @@ public class FindTheParitOutlier {
                         .filter(value -> !dividesByTwo(value)).findAny().getAsInt();
             } else if (notDevides >= 2) {
                 return Arrays.stream(integers)
-                        .filter(value -> dividesByTwo(value)).findAny().getAsInt();
+                        .filter(FindTheParitOutlier::dividesByTwo).findAny().getAsInt();
             }
         }
         return -1;
