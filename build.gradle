@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id "at.bxm.svntools" version "3.1"
+//    id "at.bxm.svntools" version "3.1"
 }
 
 group 'BrainStorm'
@@ -27,12 +27,13 @@ dependencies {
 }
 
 test {
+    useTestNG()
     systemProperties System.getProperties()
 }
 
-task export(type: at.bxm.gradleplugins.svntools.tasks.SvnExport) {
-    svnUrl = "https://svn.csltd.network/SVN/B2QA/Development/JetB2/JetB2_4600"
-    username = "tc"
-    password = "bymzQA42a"
-    targetDir = "$project.buildDir/export"
-}
+//task export(type: at.bxm.gradleplugins.svntools.tasks.SvnExport) {
+//    svnUrl = "https://svn.csltd.network/SVN/B2QA/Development/JetB2/JetB2_4600"
+//    username = "tc"
+//    password = "bymzQA42a"
+//    targetDir = "$project.buildDir/export"
+//}
