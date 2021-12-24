@@ -2,19 +2,20 @@ package algoritms;
 
 public class MinValue {
     public static void main(String[] args) {
-        int [] array = new int[] {1,2,3,4,5,6,7,8,9,10,11};
+        int [] array = new int[] {11,10,9,8,7,6,5,4,3,2,1};
 
-        int maxValue = 0;
-        int maxValueIndex = 0;
+        final int i = minValue(array);
+        System.out.println(i);
 
-        for (int i : array) {
-            if (i>maxValue) {
-                maxValue = i;
-                maxValueIndex++;
+    }
+
+    private static int minValue(int[] array) {
+        int minValue = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < minValue){
+                minValue = array[i];
             }
         }
-
-        System.out.println(maxValue);
-        System.out.println(maxValueIndex-1);
+        return minValue;
     }
 }
