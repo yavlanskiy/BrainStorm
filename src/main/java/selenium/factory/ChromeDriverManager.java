@@ -37,16 +37,5 @@ public class ChromeDriverManager extends DriverManager{
 
     @Override
     public void createDriver() {
-        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-        ChromeOptions options = new ChromeOptions();
-
-        options.addArguments("test-type");
-        options.addArguments("start-maximized");
-
-        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-        options.merge(capabilities);
-
-        driver = new ChromeDriver(chService, options);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 }
