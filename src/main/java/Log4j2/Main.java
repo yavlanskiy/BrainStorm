@@ -5,10 +5,10 @@ public class Main {
     //private static final Logger LOGGER = getLogger();
 
     // Wrapper
-    //private static final ExtLogger LOGGER = ExtLogger.create(Main.class);
+    private static final ExtLogger LOGGER = ExtLogger.create(Main.class);
 
     // Custom Loggers
-    private static final MyLoger LOGGER = MyLoger.create(Main.class);
+    //private static final MyLogger LOGGER = MyLogger.create(Main.class);
 
     public static void main(String[] args) {
         LOGGER.debug("This is a debug message");
@@ -17,6 +17,6 @@ public class Main {
         LOGGER.error("This is an error message");
         LOGGER.fatal("This is a fatal message");
         LOGGER.notice("custom logger");
-        LOGGER.defcon1("hello");
+        //LOGGER.defcon1("hello");
     }
 }
