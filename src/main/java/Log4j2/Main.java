@@ -1,16 +1,22 @@
 package Log4j2;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 public class Main {
-    private static final Logger logger = LogManager.getLogger();
+    //Base Loger
+    //private static final Logger LOGGER = getLogger();
+
+    // Wrapper
+    //private static final ExtLogger LOGGER = ExtLogger.create(Main.class);
+
+    // Custom Loggers
+    private static final MyLoger LOGGER = MyLoger.create(Main.class);
 
     public static void main(String[] args) {
-        logger.debug("This is a debug message");
-        logger.info("This is an info message");
-        logger.warn("This is a warn message");
-        logger.error("This is an error message");
-        logger.fatal("This is a fatal message");
+        LOGGER.debug("This is a debug message");
+        LOGGER.info("This is an info message");
+        LOGGER.warn("This is a warn message");
+        LOGGER.error("This is an error message");
+        LOGGER.fatal("This is a fatal message");
+        LOGGER.notice("custom logger");
+        LOGGER.defcon1("hello");
     }
 }
