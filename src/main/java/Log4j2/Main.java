@@ -8,7 +8,7 @@ public class Main {
     private static final ExtLogger LOGGER = ExtLogger.create(Main.class);
 
     // Custom Loggers
-    //private static final MyLogger LOGGER = MyLogger.create(Main.class);
+    //private static final Log LOGGER = Log.create(Main.class);
 
     public static void main(String[] args) {
         LOGGER.debug("This is a debug message");
@@ -19,4 +19,6 @@ public class Main {
         LOGGER.notice("custom logger");
         //LOGGER.defcon1("hello");
     }
+
+    // info - 400, warn - 300, error - 200, success - 400, caution - 250
 }

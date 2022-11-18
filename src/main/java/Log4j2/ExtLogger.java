@@ -2178,5 +2178,11 @@ public final class ExtLogger extends ExtendedLoggerWrapper {
     public void verbose(final MessageSupplier msgSupplier, final Throwable t) {
         logger.logIfEnabled(FQCN, VERBOSE, null, msgSupplier, t);
     }
+
+    @Override
+    public void error(String message) {
+        super.error(message);
+        System.out.println("Hello error");
+    }
 }
 
