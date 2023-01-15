@@ -2181,8 +2181,7 @@ public final class ExtLogger extends ExtendedLoggerWrapper {
 
     @Override
     public void error(String message) {
-        super.error(message);
-        System.out.println("Hello error");
+        logger.logIfEnabled(FQCN, Level.ERROR, null, message);
     }
 }
 

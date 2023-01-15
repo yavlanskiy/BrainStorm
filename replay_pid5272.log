@@ -326,7 +326,7 @@ instanceKlass org/gradle/api/internal/CompositeDomainObjectSet$ItemNotInComposit
 instanceKlass org/gradle/api/internal/CompositeDomainObjectSet$ItemIsUniqueInCompositeSpec
 instanceKlass org/gradle/api/internal/CompositeDomainObjectSet$DomainObjectCompositeCollection
 instanceKlass org/gradle/api/internal/artifacts/DefaultResolverResults
-instanceKlass org/gradle/profile/Operation
+instanceKlass org/gradle/profile/com.example.Operation
 instanceKlass org/gradle/api/internal/attributes/ImmutableAttributeContainerWithErrorMessage
 instanceKlass org/gradle/api/internal/artifacts/configurations/ResolveConfigurationResolutionBuildOperationDetails$RepositoryImpl$1
 instanceKlass org/gradle/api/internal/artifacts/configurations/ResolveConfigurationResolutionBuildOperationDetails$RepositoryImpl
@@ -1512,7 +1512,7 @@ instanceKlass org/gradle/TaskExecutionRequest
 instanceKlass org/gradle/tooling/internal/provider/serialization/ModelClassLoaderFactory
 instanceKlass org/gradle/tooling/internal/provider/serialization/DaemonSidePayloadClassLoaderFactory
 instanceKlass org/gradle/internal/operations/DefaultBuildOperationExecutor$DefaultBuildOperationContext
-instanceKlass org/gradle/internal/logging/sink/ProgressLogEventGenerator$Operation
+instanceKlass org/gradle/internal/logging/sink/ProgressLogEventGenerator$com.example.Operation
 instanceKlass org/gradle/internal/logging/progress/DefaultProgressLoggerFactory$ProgressLoggerImpl
 instanceKlass java/util/stream/IntStream
 instanceKlass java/io/ObjectOutputStream$ReplaceTable
