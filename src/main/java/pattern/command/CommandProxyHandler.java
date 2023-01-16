@@ -5,9 +5,9 @@ import java.lang.reflect.Method;
 
 public class CommandProxyHandler implements InvocationHandler {
 
-    private LightImpl light;
+    private Liqht light;
 
-    public CommandProxyHandler(LightImpl light) {
+    public CommandProxyHandler(Liqht light) {
         this.light = light;
     }
 

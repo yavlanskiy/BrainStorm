@@ -18,7 +18,7 @@ public class Switch {
         commandMap.put(commandName, command);
     }
 
-    public void execute(String commandName, LightImpl light) {
+    public void execute(String commandName, Liqht light) {
         Command command = commandMap.get(commandName);
         if (command == null) {
             throw new IllegalStateException("no command registered for " + commandName);

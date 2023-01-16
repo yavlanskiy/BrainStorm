@@ -1,5 +1,5 @@
 package pattern.command;
 
 public interface Command {
-    void execute(LightImpl light);
+    void execute(Liqht light);
 }
