@@ -1,14 +1,9 @@
 package pattern.command;
 
-public class SwitchOnCommand implements Command{
-    private final Light light;
-
-    public SwitchOnCommand(Light light) {
-        this.light = light;
-    }
+public class SwitchOnCommand implements Command {
 
     @Override
-    public void execute() {
+    public void execute(LightImpl light) {
         light.turnOn();
     }
 }

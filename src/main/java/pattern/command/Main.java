@@ -1,17 +1,16 @@
 package pattern.command;
 
+import java.lang.reflect.Proxy;
+
 public class Main {
     public static void main(final String[] arguments) {
-        Light lamp = new Light();
+        LightImpl lamp = new LightImpl();
 
-        Command switchOn = new SwitchOnCommand(lamp);
-        Command switchOff = new SwitchOffCommand(lamp);
+        final ClassLoader classLoader = lamp.getClass().getClassLoader();
+        final Class<?>[] interfaces = lamp.getClass().getInterfaces();
 
-        Switch mySwitch = new Switch();
-        mySwitch.register("on", switchOn);
-        mySwitch.register("off", switchOff);
+        final Liqht light = (Liqht) Proxy.newProxyInstance(classLoader, interfaces, new CommandProxyHandler(lamp));
 
-        mySwitch.execute("on");
-        mySwitch.execute("off");
+        light.turnOn();
     }
 }
