@@ -1,5 +1,7 @@
 package pattern.composite.shapes;
 
+import javax.annotation.CheckReturnValue;
+import javax.annotation.Nonnull;
 import java.awt.*;
 
 public class BaseShape implements Shape{
@@ -41,6 +43,7 @@ public class BaseShape implements Shape{
     }
 
     @Override
+    @CheckReturnValue
     public boolean isInsideBounds(int x, int y) {
         return x > getX() && x < (getX() + getWidth()) &&
                 y > getY() && y < (getY() + getHeight());
