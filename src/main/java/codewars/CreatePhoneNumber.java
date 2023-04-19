@@ -16,7 +16,8 @@ public class CreatePhoneNumber {
     public static String createPhoneNumber(int[] numbers) {
         return Stream.of(Arrays.toString(numbers))
                 .map(s1 -> s1.replaceAll("[\\]\\[\\(\\),. ]",""))
-                .map(s1 -> s1.replaceAll("(^.{0,3})(...)", "($1) $2-")).collect(Collectors.joining());
+                .map(s1 -> s1.replaceAll("(^.{0,3})(...)", "($1) $2-"))
+                .collect(Collectors.joining());
     }
 
     public static void main(String[] args) {
