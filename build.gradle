@@ -37,6 +37,11 @@ dependencies {
             files("lib/xmlunit-1.6.jar")
     )
     implementation 'org.codehaus.groovy:groovy-all:3.0.17'
+
+    // https://mvnrepository.com/artifact/com.itextpdf/itextpdf
+    implementation 'com.itextpdf:itextpdf:5.5.13.3'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-text
+    implementation 'org.apache.commons:commons-text:1.10.0'
 }
 
 test {
